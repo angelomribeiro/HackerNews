@@ -8,7 +8,7 @@ stories" from the Hacker News API.
 1. Open the file HackerNews.sln;
 2. Press F5 or select the menu Debug \ Start Debugging
 3. The URL is https://localhost:44363/api/beststories
-
+4. The URl to SWAGGER: https://localhost:44363/swagger/
 
 ## Resources
 
@@ -50,3 +50,4 @@ The number of request alloweds is configured in appsettings.json (1000 request e
 ## Future Improvements
 1. Add a log service to save important informations about the process;
 2. Save the result in a cache to improve the performance;
+3. Use Polly (Retry pattern) to provide resilience;
