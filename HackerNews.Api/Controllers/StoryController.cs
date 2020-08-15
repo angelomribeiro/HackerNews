@@ -1,5 +1,6 @@
 ﻿using HackerNews.Service.Dtos;
 using HackerNews.Service.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,9 @@ namespace HackerNews.Api.Controllers
         }
 
         [Route("api/beststories"), HttpGet]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(List<BestStoryDTO>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Index()
         {
             try
