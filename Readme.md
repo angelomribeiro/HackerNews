@@ -27,7 +27,7 @@ The url base and, the max records is configured in appsettings.json:
 "MaxSize": 20,
 ```
 
-The number of request alloweds is configured in appsettings.json (1 request each 5 seconds):
+The number of request alloweds is configured in appsettings.json (1000 request each 1 seconds), this value can be changed if necessary:
 
 
 ```
@@ -40,8 +40,8 @@ The number of request alloweds is configured in appsettings.json (1 request each
     "GeneralRules": [
       {
         "Endpoint": "*:/api/*",
-        "Period": "5s",
-        "Limit": 1
+        "Period": "1s",
+        "Limit": 1000
       }
     ]
   }
